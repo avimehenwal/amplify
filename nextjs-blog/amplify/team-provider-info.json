@@ -1,15 +1,20 @@
 {
   "dev": {
     "awscloudformation": {
-      "AuthRoleName": "amplify-nextjsblog-dev-195403-authRole",
-      "UnauthRoleArn": "arn:aws:iam::666642291292:role/amplify-nextjsblog-dev-195403-unauthRole",
-      "AuthRoleArn": "arn:aws:iam::666642291292:role/amplify-nextjsblog-dev-195403-authRole",
+      "AuthRoleName": "amplify-nextjsblog-dev-201250-authRole",
+      "UnauthRoleArn": "arn:aws:iam::666642291292:role/amplify-nextjsblog-dev-201250-unauthRole",
+      "AuthRoleArn": "arn:aws:iam::666642291292:role/amplify-nextjsblog-dev-201250-authRole",
       "Region": "eu-west-1",
-      "DeploymentBucketName": "amplify-nextjsblog-dev-195403-deployment",
-      "UnauthRoleName": "amplify-nextjsblog-dev-195403-unauthRole",
-      "StackName": "amplify-nextjsblog-dev-195403",
-      "StackId": "arn:aws:cloudformation:eu-west-1:666642291292:stack/amplify-nextjsblog-dev-195403/937bd900-3d74-11eb-ae64-06dee405464c",
-      "AmplifyAppId": "d2fjrhrc7j6and"
+      "DeploymentBucketName": "amplify-nextjsblog-dev-201250-deployment",
+      "UnauthRoleName": "amplify-nextjsblog-dev-201250-unauthRole",
+      "StackName": "amplify-nextjsblog-dev-201250",
+      "StackId": "arn:aws:cloudformation:eu-west-1:666642291292:stack/amplify-nextjsblog-dev-201250/339f90f0-3d77-11eb-9120-06b448abb2ce",
+      "AmplifyAppId": "d2ver3tjljqnh3"
+    },
+    "categories": {
+      "auth": {
+        "nextjsblog551c4a5a": {}
+      }
     }
   }
 }
