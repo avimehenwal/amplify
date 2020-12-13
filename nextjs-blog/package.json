@@ -8,7 +8,9 @@
     "start": "next start"
   },
   "dependencies": {
-    "next": "^10.0.0",
+    "@aws-amplify/ui-react": "0.2.32",
+    "aws-amplify": "3.3.12",
+    "next": "10.0.0",
     "react": "16.13.1",
     "react-dom": "16.13.1"
   }
