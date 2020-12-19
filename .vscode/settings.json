@@ -18,6 +18,8 @@
     "release",
     "vscode",
     "nextjs",
-    "amplify"
+    "amplify",
+    "redux",
+    "react"
   ]
 }
