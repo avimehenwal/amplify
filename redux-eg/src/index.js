@@ -5,16 +5,59 @@ import reportWebVitals from './reportWebVitals';
 import App from './App';
 import './index.css';
 
-import { Provider } from 'react-redux'
-import store from './redux/store'
+// multiple reducers using combinedReducer
+import { createStore } from "redux";
 
+// STORE
 
+// ACTIONS
+const increment = () => {
+  return {
+    type: 'INCREMENT',
+    payload: 1
+  }
+}
+
+const decrement = () => {
+  return {
+    type: 'DECREMENT',
+    payload: -1
+  }
+}
+
+// REDUCER
+// store + oldState = newState
+// let store = 0
+const reducerFn = (state = 0, action: { type: any; }) => {
+  switch (action.type) {
+    case "INCREMENT":
+      return ++state;
+    case "DECREMENT":
+      return --state;
+    default:
+      console.log('ERROR')
+      break;
+  }
+}
+
+let store = createStore(reducerFn,
+  window.__REDUX_DEVTOOLS_EXTENSION__ && window.__REDUX_DEVTOOLS_EXTENSION__())
+store.subscribe(() => console.log(store.getState()));
+
+// DISPATCHER
+store.dispatch(increment())
+store.dispatch(increment())
+store.dispatch(increment())
+store.dispatch(increment())
+store.dispatch(decrement())
+store.dispatch(decrement())
+
+// <Provider store={store}>
+// </Provider>,
 ReactDOM.render(
-  <Provider store={store}>
-    <React.StrictMode>
-      <App />
-    </React.StrictMode>
-  </Provider>,
+  <React.StrictMode>
+    <App />
+  </React.StrictMode>,
   document.getElementById('root')
 );
 

@@ -3,6 +3,45 @@ import ReactDOM from 'react-dom';
 import './index.css';
 import App from './App';
 import reportWebVitals from './reportWebVitals';
+import { createStore } from "redux";
+
+// STORE
+
+// ACTIONS
+const increment = () => {
+  return {
+    type: 'INCREMENT',
+    payload: 1
+  }
+}
+
+const decrement = () => {
+  return {
+    type: 'DECREMENT',
+    payload: -1
+  }
+}
+
+// REDUCER
+// store + oldState = newState
+// let store = 0
+const reducerFn = (state=0, action: { type: any; }) => {
+  switch (action.type) {
+    case "INCREMENT":
+      return ++state;
+    case "DECREMENT":
+      return --state;
+    default:
+      console.log('ERROR')
+      break;
+  }
+}
+
+let store = createStore(reducerFn)
+store.subscribe(() => console.log(store.getState()));
+
+// DISPATCHER
+store.dispatch(increment())
 
 ReactDOM.render(
   <React.StrictMode>
